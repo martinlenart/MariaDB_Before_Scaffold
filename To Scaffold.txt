@@ -1,0 +1,19 @@
+1. Compile and Run NorthwindApplication. 
+	- The DbConnections Directory is shown on the console
+	- First time you run the program make sure to copy the file "DbConnections.json" to the Configuration Directory
+	- "DbConnections.json" contains the Database connection string
+
+2. After you have copied the "DbConnections.json", re-run the program
+	- Your should have the Database Connection String as output on the console
+
+3. Open PMC and ensure that the Class Library, NorthwindDbLibrary, is the default project
+4. In PMC, type below command to Scaffold:
+	Scaffold-DbContext 'server=localhost;uid=martin;pwd=seidoab;database=northwind' Pomelo.EntityFrameworkCore.MySql -DataAnnotations
+
+5. Your NorthwindDbLibrary should now be filled with classes making up the Northwind Datamodel
+
+6. To test the Database connection and query the database. 
+	- In Program, uncomment all the code lines in the regions named "Uncomment after scaffolding"
+
+7. Recompile and run. The output to the Console should now be the Nr of Customer, Employees and Orders in 
+   the Northwind Database
